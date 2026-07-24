@@ -14,19 +14,33 @@ models/**/*.ckpt
 models/**/*.bin
 models/**/*.pth
 models/**/*.pt
+models/**/*.gguf
+
+# Keep model directory structure without tracking model payloads
+!models/**/.gitkeep
 
 # Cache
-storage/cache/
+storage/cache/**
+!storage/cache/**/
+!storage/cache/**/.gitkeep
 *.cache
 
 # Generated media
-exports/
+exports/**
+!exports/**/
+!exports/**/.gitkeep
 *.png
 *.jpg
 *.jpeg
 *.mp4
 *.webm
 *.gif
+
+# ComfyUI runtime data
+apps/comfy/ComfyUI/input/
+apps/comfy/ComfyUI/output/
+apps/comfy/ComfyUI/temp/
+apps/comfy/ComfyUI/user/
 
 # Logs
 *.log

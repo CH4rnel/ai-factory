@@ -1,0 +1,16 @@
+ai_factory:
+  base_path: ../models
+  is_default: true
+  checkpoints: checkpoints
+  diffusion_models: |
+    diffusion_models
+    flux
+  text_encoders: |
+    text_encoders
+    clip
+  vae: vae
+  loras: loras
+  clip_vision: clip_vision
+  embeddings: embeddings
+  controlnet: controlnet
+  upscale_models: upscale_models
