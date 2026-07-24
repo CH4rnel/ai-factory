@@ -28,8 +28,6 @@ exec "${PYTHON}" "${COMFY_ROOT}/main.py" \
     --listen 127.0.0.1 \
     --port 8188 \
     --disable-auto-launch \
-    --lowvram \
-    --disable-dynamic-vram \
     --reserve-vram 0.5 \
     --extra-model-paths-config "${MODEL_CONFIG}" \
     "$@"

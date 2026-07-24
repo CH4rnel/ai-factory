@@ -57,14 +57,45 @@ are local runtime assets and must not be committed to Git.
 
 The launcher uses the conservative profile intended for 6 GB VRAM:
 
-- text encoders are offloaded to system RAM;
-- dynamic VRAM mode is disabled so `--lowvram` is effective;
+- DynamicVRAM automatically loads and offloads model parts as needed;
 - 0.5 GB VRAM is reserved for the desktop and display server;
 - browser auto-launch is disabled.
 
 If an inference still runs out of memory, close other GPU applications and try
 `./scripts/comfy.sh --novram` instead. `--novram` is slower because it performs
 more aggressive CPU offloading.
+
+## FLUX.1 Schnell
+
+The initial RTX 2060 workflow uses the official all-in-one FP8 checkpoint. It
+contains the diffusion model, text encoders, and VAE in a single file.
+
+Install it with:
+
+```bash
+./scripts/download-flux-schnell.sh
+```
+
+The download is approximately 17.2 GB, supports resuming, and is validated
+against its expected file size. The model is stored at:
+
+```text
+models/checkpoints/flux1-schnell-fp8.safetensors
+```
+
+Start ComfyUI and open the project workflow:
+
+```bash
+./scripts/comfy.sh
+```
+
+```text
+workflows/comfy/flux-schnell-fp8-rtx2060.json
+```
+
+The first-run preset uses 512×512 resolution, four Euler/simple steps, and an
+empty negative prompt. Increase resolution only after a successful baseline
+generation.
 
 ## Verification
 
