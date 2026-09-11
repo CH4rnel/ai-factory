@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ai-factory
+Version: 0.1.0
+Summary: Local-first AI Media Factory for content generation
+Author: CH4rnel
+Requires-Python: <3.13,>=3.12
+License-File: LICENCE
+License-File: LICENSE
+Dynamic: license-file
