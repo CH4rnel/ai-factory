@@ -6,4 +6,6 @@ Author: CH4rnel
 Requires-Python: <3.13,>=3.12
 License-File: LICENCE
 License-File: LICENSE
+Requires-Dist: requests>=2.34.2
+Requires-Dist: tqdm>=4.70.1
 Dynamic: license-file
