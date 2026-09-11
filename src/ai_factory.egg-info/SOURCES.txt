@@ -8,6 +8,11 @@ src/ai_factory.egg-info/PKG-INFO
 src/ai_factory.egg-info/SOURCES.txt
 src/ai_factory.egg-info/dependency_links.txt
 src/ai_factory.egg-info/entry_points.txt
+src/ai_factory.egg-info/requires.txt
 src/ai_factory.egg-info/top_level.txt
+src/ai_factory/contracts/__init__.py
+src/ai_factory/contracts/manifest.py
+tests/test_comfyui_phase1.py
 tests/test_doctor.py
 tests/test_doctor_command.py
+tests/test_flux_phase2.py
