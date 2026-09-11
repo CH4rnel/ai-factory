@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "Local-first AI Media Factory for content generation"
 requires-python = ">=3.12,<3.13"
 authors = [{name = "CH4rnel"}]
+dependencies = [
+    "requests>=2.34.2",
+    "tqdm>=4.70.1",
+]
 
 [dependency-groups]
 core = ["pydantic>=2.9", "structlog>=24.4", "typer>=0.15", "tenacity>=9.0"]
