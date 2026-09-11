@@ -1,16 +1,22 @@
+# Centralized model storage.
+# ComfyUI will look for models in these paths instead of apps/comfy/ComfyUI/models.
 ai_factory:
-  base_path: ../models
-  is_default: true
-  checkpoints: checkpoints
-  diffusion_models: |
-    diffusion_models
-    flux
-  text_encoders: |
-    text_encoders
-    clip
-  vae: vae
-  loras: loras
-  clip_vision: clip_vision
-  embeddings: embeddings
+  base_path: /home/CH4rnel_exe/Projects/ai-factory/models
+  
+  # Checkpoints (full models, if needed)
+  checkpoints: flux/checkpoints
+  
+  # UNet/DiT models (for FLUX GGUF)
+  unet: flux/unet
+  
+  # CLIP text encoders
+  clip: flux/clip
+  
+  # VAE
+  vae: flux/vae
+  
+  # Diffusion-based models (for Wan and others)
+  diffusion_models: wan/diffusion_models
+  
+  # ControlNet models
   controlnet: controlnet
-  upscale_models: upscale_models
