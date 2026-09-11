@@ -7,12 +7,24 @@ authors = [{name = "CH4rnel"}]
 
 [dependency-groups]
 core = ["pydantic>=2.9", "structlog>=24.4", "typer>=0.15", "tenacity>=9.0"]
-gpu = ["torch>=2.11.0"]
+gpu = [
+    "torch>=2.11.0",
+]
 dev = ["ruff>=0.8", "mypy>=1.13", "pre-commit>=4.0"]
 test = ["pytest>=8.3", "hypothesis>=6.115", "pytest-asyncio>=0.24"]
 
 [tool.uv]
 default-groups = ["core", "dev", "test"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+ai-factory = "ai_factory.cli:app"
 
 [tool.ruff]
 line-length = 100
